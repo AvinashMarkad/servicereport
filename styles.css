@@ -1,0 +1,548 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --success-color: #27ae60;
+  --error-color: #e74c3c;
+  --warning-color: #f39c12;
+  --pdf-color: #9b59b6;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: var(--dark-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, var(--primary-color), #34495e);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Form Container */
+.form-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+/* Form Layout */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  align-items: flex-start;
+}
+
+.form-col {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.form-col-2 {
+  flex: 2;
+}
+
+/* Form Elements */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+}
+
+.required {
+  color: var(--error-color);
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-family: inherit;
+  transition: var(--transition);
+  background-color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: var(--error-color);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Checkbox Styles */
+.checkbox-group,
+.checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: var(--secondary-color);
+}
+
+.checkbox-item label {
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Section Headers */
+h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--light-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Signature Styles */
+.signature-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.signature-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.signature-pad {
+  width: 100%;
+  height: 150px;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: white;
+  cursor: crosshair;
+  touch-action: none;
+  margin: 10px 0;
+  transition: var(--transition);
+}
+
+.signature-pad:hover {
+  border-color: var(--secondary-color);
+}
+
+.signature-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  margin: 5px;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-width: auto;
+}
+
+.btn-print {
+  background-color: var(--success-color);
+}
+
+.btn-print:hover {
+  background-color: #219653;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.btn-clear {
+  background-color: var(--error-color);
+}
+
+.btn-clear:hover {
+  background-color: #c0392b;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-pdf {
+  background-color: var(--pdf-color);
+}
+
+.btn-pdf:hover {
+  background-color: #8e44ad;
+  box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3);
+}
+
+.button-group {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 2px solid var(--light-color);
+}
+
+/* Error Messages */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+/* Company Info */
+.company-info {
+  background-color: var(--light-color);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--dark-color);
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-overlay.show {
+  display: flex;
+}
+
+.loading-spinner {
+  background-color: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.loading-spinner i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+/* Message Container */
+.message-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.message {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  color: white;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+  animation: slideIn 0.3s ease;
+}
+
+.message.success {
+  background-color: var(--success-color);
+}
+
+.message.error {
+  background-color: var(--error-color);
+}
+
+.message.warning {
+  background-color: var(--warning-color);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: white;
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .form-container {
+    box-shadow: none;
+    padding: 20px;
+    margin: 0;
+  }
+
+  header {
+    background: var(--primary-color) !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  .signature-pad {
+    border: 1px solid #000;
+  }
+
+  .form-row {
+    margin: 0;
+  }
+
+  .form-col {
+    padding: 0 5px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header {
+    padding: 20px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-col {
+    min-width: 100%;
+    padding: 0 5px;
+  }
+
+  .signature-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .signature-box {
+    min-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+    justify-content: center;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .checkbox-item:last-child {
+    border-bottom: none;
+  }
+
+  .checkbox-item input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 15px;
+  }
+
+  .message-container {
+    left: 10px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .message {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .signature-pad {
+    height: 120px;
+  }
+
+  .company-info {
+    padding: 15px;
+    font-size: 12px;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  input,
+  textarea,
+  select {
+    border-width: 3px;
+  }
+
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Focus visible for better keyboard navigation */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}

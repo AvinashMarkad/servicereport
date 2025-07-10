@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Report Generator - Cool Air Enterprises</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tools"></i> SERVICE REPORT</h1>
+            <p>COOL AIR ENTERPRISES</p>
+        </header>
+
+        <div class="form-container">
+            <form id="serviceReportForm" novalidate>
+                <!-- Basic Information -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="reportNo">Report No. <span class="required">*</span></label>
+                        <input type="text" id="reportNo" name="reportNo" required>
+                        <div class="error-message" id="reportNo-error"></div>
+                    </div>
+                    <div class="form-col">
+                        <label for="customerName">Customer Name <span class="required">*</span></label>
+                        <input type="text" id="customerName" name="customerName" required>
+                        <div class="error-message" id="customerName-error"></div>
+                    </div>
+                    <div class="form-col">
+                        <label>Preventive Maintenance No.</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pm01" name="pmNo" value="01">
+                                <label for="pm01">01</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pm02" name="pmNo" value="02">
+                                <label for="pm02">02</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pm03" name="pmNo" value="03">
+                                <label for="pm03">03</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pm04" name="pmNo" value="04">
+                                <label for="pm04">04</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address and Dates -->
+                <div class="form-row">
+                    <div class="form-col form-col-2">
+                        <label for="address">Address <span class="required">*</span></label>
+                        <textarea id="address" name="address" required placeholder="Enter customer address"></textarea>
+                        <div class="error-message" id="address-error"></div>
+                    </div>
+                    <div class="form-col">
+                        <label for="dateDone">Date Done <span class="required">*</span></label>
+                        <input type="date" id="dateDone" name="dateDone" required>
+                        <div class="error-message" id="dateDone-error"></div>
+                    </div>
+                    <div class="form-col">
+                        <label for="dateDue">Date Due <span class="required">*</span></label>
+                        <input type="date" id="dateDue" name="dateDue" required>
+                        <div class="error-message" id="dateDue-error"></div>
+                    </div>
+                </div>
+
+                <!-- Equipment Details -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="machineNo">Machine No.</label>
+                        <input type="text" id="machineNo" name="machineNo">
+                    </div>
+                    <div class="form-col">
+                        <label for="equipment">Equipment</label>
+                        <input type="text" id="equipment" name="equipment">
+                    </div>
+                    <div class="form-col">
+                        <label for="unitSerialNo">Unit Serial No.</label>
+                        <input type="text" id="unitSerialNo" name="unitSerialNo">
+                    </div>
+                    <div class="form-col">
+                        <label for="capacity">Capacity</label>
+                        <input type="text" id="capacity" name="capacity">
+                    </div>
+                    <div class="form-col">
+                        <label for="refrigerant">Refrigerant</label>
+                        <input type="text" id="refrigerant" name="refrigerant">
+                    </div>
+                </div>
+
+                <!-- Observations -->
+                <div class="form-group">
+                    <h3><i class="fas fa-eye"></i> Observations</h3>
+                    <div class="checkbox-grid">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="filterCleaning" name="observations" value="Filter Cleaning">
+                            <label for="filterCleaning">Filter Cleaning</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="condenserCleaning" name="observations" value="Condenser Cleaning">
+                            <label for="condenserCleaning">Condenser Cleaning</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="evaporatorCleaning" name="observations" value="Evaporator Cleaning">
+                            <label for="evaporatorCleaning">Evaporator Cleaning</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="fanBlowerChecking" name="observations" value="Fan/Blower Checking">
+                            <label for="fanBlowerChecking">Fan/Blower Checking</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drainPipeCleaning" name="observations" value="Drain Pipe Cleaning">
+                            <label for="drainPipeCleaning">Drain Pipe Cleaning</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="suctionLineChecking" name="observations" value="Suction Line Insulation Checking">
+                            <label for="suctionLineChecking">Suction Line Insulation Checking</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="tightnessChecking" name="observations" value="Check Tightness of Component">
+                            <label for="tightnessChecking">Check Tightness of Component</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="electricalChecking" name="observations" value="Check Electrical Components">
+                            <label for="electricalChecking">Check Electrical Components</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="tempChecking" name="observations" value="Checking Temperature">
+                            <label for="tempChecking">Checking Temperature</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Readings -->
+                <div class="form-group">
+                    <h3><i class="fas fa-gauge"></i> Readings</h3>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="supply">Supply (V/Ph/Hz)</label>
+                            <input type="text" id="supply" name="supply" placeholder="e.g., 220V/1Ph/50Hz">
+                        </div>
+                        <div class="form-col">
+                            <label for="standingPressure">Standing Pressure (Psig)</label>
+                            <input type="number" id="standingPressure" name="standingPressure" step="0.1">
+                        </div>
+                        <div class="form-col">
+                            <label for="suctionPressure">Suction Pressure (Psig)</label>
+                            <input type="number" id="suctionPressure" name="suctionPressure" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="dischargePressure">Discharge Pressure (Psig)</label>
+                            <input type="number" id="dischargePressure" name="dischargePressure" step="0.1">
+                        </div>
+                        <div class="form-col">
+                            <label for="compressorCurrent">Compressor Current (A)</label>
+                            <input type="number" id="compressorCurrent" name="compressorCurrent" step="0.1">
+                        </div>
+                        <div class="form-col">
+                            <label for="fanPumpCurrent">Fan/Pump Current (A)</label>
+                            <input type="number" id="fanPumpCurrent" name="fanPumpCurrent" step="0.1">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="totalCurrent">Total Current (A)</label>
+                            <input type="number" id="totalCurrent" name="totalCurrent" step="0.1">
+                        </div>
+                        <div class="form-col">
+                            <label for="temperature">Temperature (°C)</label>
+                            <input type="number" id="temperature" name="temperature" step="0.1">
+                        </div>
+                        <div class="form-col">
+                            <!-- Empty column for alignment -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Material and Remarks -->
+                <div class="form-row">
+                    <div class="form-col form-col-2">
+                        <label for="materialUsed">Material Used & Remark</label>
+                        <textarea id="materialUsed" name="materialUsed" placeholder="List materials used and any remarks"></textarea>
+                    </div>
+                    <div class="form-col form-col-2">
+                        <label for="customerRemark">Customer Remark</label>
+                        <textarea id="customerRemark" name="customerRemark" placeholder="Customer feedback or remarks"></textarea>
+                    </div>
+                </div>
+
+                <!-- Signatures -->
+                <div class="signature-container">
+                    <div class="signature-box">
+                        <label for="engineerName">Engineer's Name and Signature <span class="required">*</span></label>
+                        <input type="text" id="engineerName" name="engineerName" placeholder="Engineer Name" required>
+                        <div class="error-message" id="engineerName-error"></div>
+                        <canvas class="signature-pad" id="engineerSignaturePad" width="300" height="150"></canvas>
+                        <div class="signature-controls">
+                            <button type="button" class="btn btn-clear btn-sm no-print" id="clearEngineerSignature">
+                                <i class="fas fa-eraser"></i> Clear
+                            </button>
+                        </div>
+                        <input type="hidden" id="engineerSignature" name="engineerSignature">
+                    </div>
+                    <div class="signature-box">
+                        <label for="customerSignatureName">Customer Name and Signature</label>
+                        <input type="text" id="customerSignatureName" name="customerSignatureName" placeholder="Customer Name">
+                        <canvas class="signature-pad" id="customerSignaturePad" width="300" height="150"></canvas>
+                        <div class="signature-controls">
+                            <button type="button" class="btn btn-clear btn-sm no-print" id="clearCustomerSignature">
+                                <i class="fas fa-eraser"></i> Clear
+                            </button>
+                        </div>
+                        <input type="hidden" id="customerSignature" name="customerSignature">
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-group no-print">
+                    <button type="submit" class="btn" id="saveReport">
+                        <i class="fas fa-save"></i> Save Report
+                    </button>
+                    <button type="button" class="btn btn-print" id="printReport">
+                        <i class="fas fa-print"></i> Print Report
+                    </button>
+                    <button type="button" class="btn btn-pdf" id="downloadPdf">
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </button>
+                    <button type="button" class="btn btn-clear" id="clearForm">
+                        <i class="fas fa-trash"></i> Clear Form
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Company Information -->
+        <div class="company-info">
+            <strong>COOL AIR ENTERPRISES</strong><br>
+            Office Add: Sr. No. 214/1/20, Flat No. 401, Shiv Vandan Complex,<br>
+            Ganganagar Fursungi, Tal- Haveli, Dist- Pune- 412308<br>
+            Contact - +91 9960969109 | Email: coolairenterprises@gmail.com<br>
+            GST No.:- 27AXQPD8349G1Z1
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="messageContainer" class="message-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
